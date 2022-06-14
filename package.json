@@ -9,6 +9,7 @@
   "description": "",
   "main": "backend/server.js",
   "scripts": {
+    "build": "node --experimental-modules  backend/server.js",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "author": "",
