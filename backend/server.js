@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from 'mongoose';
+import productsRouter from "./routers/productsRouter.js";
 import userRouter from "./routers/userRouter.js";
 const pass = "Izzw2cdbmsfKaagl";
 const user = "posdb-user";
@@ -13,6 +14,7 @@ mongoose.connect(process.env.MONGODB_URL || dbUrl,
     });
 
 app.use('/api/users', userRouter);
+app.use('/api/products', productsRouter);
 
 app.get('/', (req, res) => {
     res.send("server is ready")
